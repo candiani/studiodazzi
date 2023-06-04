@@ -8,6 +8,7 @@ import json
 import os
 
 
+
 from selenium.webdriver.support.ui import WebDriverWait
 
 # fp = webdriver.FirefoxProfile('C:\\Users\\AndreaFrancesco\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\ia63cg2l.default-release')
@@ -46,12 +47,16 @@ driver.switch_to.window(new_window)
 
 
 #
-time.sleep(5)
+time.sleep(30)
 
 
 def insertElement():
+    global senzaZona
     senzaZona = False
     isToDelete = False
+
+    global stazioni
+
 
     elementInterno = driver.find_element_by_xpath('/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]')
     classInterno = elementInterno.text
@@ -84,9 +89,10 @@ def insertElement():
             print("Element CloseButton4 found")
             isCloseButton4 = True
             isCloseButton2 = False
+            senzaZona = True
             #closeButton.click()
     except NoSuchElementException:
-        print("Element CloseButton not found")
+        print("Element CloseButton4 not found")
     try:
         if isCloseButton2:
             mappa = driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/div/div[1]/div[2]/div[1]/img')
@@ -100,8 +106,8 @@ def insertElement():
         checkStazione = driver.find_element_by_xpath(
             '/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div[2]/ul/li/div')
         if 'STAZIONE' in checkStazione.text:
-            senzaZona = False
-            #decidiZone()
+            stazioni = driver.find_element_by_xpath(
+                '/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div[2]').text
 
     except NoSuchElementException:
         print("Element Stazione not found")
@@ -125,6 +131,8 @@ def insertElement():
 
     driver.execute_script("window.history.go(-1)")
 
+    if stazioni != '':
+        decidiZone()
 
     time.sleep(2)
     if isToDelete:
@@ -145,7 +153,7 @@ def insertElement():
     testo.send_keys(messageImm)
 
 
-    if isSenzaZoneSelected():
+    if isSenzaZoneSelected() and senzaZona:
         checkNessunaZona = driver.find_element_by_xpath(
             '/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[21]'
         ).click()
@@ -171,26 +179,41 @@ def isSenzaZoneSelected():
     return True
 def decidiZone():
 
-    stazioni = driver.find_element_by_xpath(
-        '/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div[2]').text
+    global stazioni
+    global senzaZona
+    senzaZona = True
 
-    # for line in stazioni.splitlines():
-    #     lineCleaned = line.replace("STAZIONE ", "").lower()
-    #
-    #     for zone in macrozones:
-    #
+    #stazioni = driver.find_element_by_xpath('/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div[2]').text
+    for line in stazioni.splitlines():
+        lineCleaned = line.replace("STAZIONE ", "").lower()
 
-        # if line = 'STAZIONE WAGNER':
-        #     driver.find_element_by_xpath('/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[14]')
-        #     .click();
+        for zone in macrozones:
+            if lineCleaned in zone['child']:
+                print(zone['label'])
+                for item in mappingZone:
+                    if item['label'] == zone['label']:
+                        driver.find_element_by_xpath(item['input']).click()
+                        senzaZona = False
+                        break
+                break
+        print('none')
+        stazioni = ''
+
 
 def getMetroZones():
     #https://www.immobiliare.it/search/macrozones?id=8042&type=3
     global macrozones
 
-    with open('macrozones.json', 'r') as f:
-
-        macrozones = json.load(f)["macrozones"]
+    input_file = open('macrozones.json')
+    json_array = json.load(input_file)
+    macrozones = []
+    for item in json_array:
+        for child in item['children']:
+            store_details = {"label": None, "child": None}
+            store_details['label'] = item['label']
+            store_details['child'] = child['label'].lower()
+            macrozones.append(store_details)
+    print('stop')
 
 def getMappingZone():
     global mappingZone
@@ -208,8 +231,10 @@ def getMappingZone():
 
 count = 0
 
-macrozones = {}
+macrozones = []
 mappingZone = []
+stazioni = ''
+senzaZona = False
 
 getMetroZones()
 getMappingZone()
