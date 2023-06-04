@@ -1,0 +1,130 @@
+[
+	{
+		"label": "Abbiategrasso, Chiesarossa",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[1]"
+	},
+	{
+		"label": "Affori, Bovisa",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[2]"
+	},
+	{
+		"label": "Arco della Pace, Arena, Pagano",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[3]"
+	},
+	{
+		"label": "Bande Nere, Inganni",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[4]"
+	},
+	{
+		"label": "Bicocca, Niguarda",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[5]"
+	},
+	{
+		"label": "Bisceglie, Baggio, Olmi",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[6]"
+	},
+	{
+		"label": "Cenisio, Sarpi, Isola",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[7]"
+	},
+	{
+		"label": "Centrale, Repubblica",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[8]"
+	},
+	{
+		"label": "Centro",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[9]"
+	},
+	{
+		"label": "Cimiano, Crescenzago, Adriano",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[10]"
+	},
+	{
+		"label": "Città Studi, Susa",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[11]"
+	},
+	{
+		"label": "Corvetto, Rogoredo",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[12]"
+	},
+	{
+		"label": "Famagosta, Barona",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[13]"
+	},
+	{
+		"label": "Fiera, Sempione, City Life",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[14]"
+	},
+	{
+		"label": "Forlanini",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[15]"
+	},
+	{
+		"label": "Garibaldi, Moscova, Porta Nuova",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[16]"
+	},
+	{
+		"label": "Genova, Ticinese",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[17]"
+	},
+	{
+		"label": "Maggiolina, Istria",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[18]"
+	},
+	{
+		"label": "Napoli, Soderini",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[19]"
+	},
+	{
+		"label": "Navigli",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[20]"
+	},
+	{
+		"label": "Pasteur, Rovereto",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[21]"
+	},
+	{
+		"label": "Ponte Lambro, Santa Giulia",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[22]"
+	},
+	{
+		"label": "Porta Romana, Cadore, Montenero",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[23]"
+	},
+	{
+		"label": "Porta Venezia, Indipendenza",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[24]"
+	},
+	{
+		"label": "Porta Vittoria, Lodi",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[25]"
+	},
+	{
+		"label": "Precotto, Turro",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[26]"
+	},
+	{
+		"label": "Quadronno, Palestro, Guastalla",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[27]"
+	},
+	{
+		"label": "Ripamonti, Vigentino",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[28]"
+	},
+	{
+		"label": "San Siro, Trenno",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[29]"
+	},
+	{
+		"label": "Solari, Washington",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[30]"
+	},
+	{
+		"label": "Udine, Lambrate",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[31]"
+	},
+	{
+		"label": "Viale Certosa, Cascina Merlata",
+		"input": "/html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/form[1]/fieldset[4]/input[32]"
+	}
+]
